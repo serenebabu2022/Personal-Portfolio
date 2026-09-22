@@ -90,18 +90,32 @@ const skillGroups = [
 
 const experience = [
   {
-    period: "2023 — Now",
-    role: "Senior Full-Stack Developer",
-    company: "Independent / Consulting",
+    period: "Sept 2025 — Present",
+    role: "Full Stack Developer",
+    company: "Caddayn, Remote",
     detail:
-      "Building dependable products across frontend, APIs, data, and cloud infrastructure.",
+      "Built ASP.NET Core (.NET 8) Web APIs using C#, Entity Framework Core, LINQ, SQL Server and containerized using Docker for ERP-based employee management system",
   },
   {
-    period: "2020 — 2023",
-    role: "Software Developer",
-    company: "Product & Platform Teams",
+    period: "Dec 2024 — Sept 2025",
+    role: "Full Stack Developer Volunteer",
+    company: "Orcawise, Dublin, Ireland",
     detail:
-      "Shipped customer-facing React applications and backend services in collaborative delivery teams.",
+      "Developed a GenAI-powered chatbot platform using React (TypeScript) and Python Flask APIs. Integrated OpenAI LLMs and worked with LangChain-based RAG pipelines using embeddings and FAISS vector storage.",
+  },
+  {
+    period: "Nov 2022 — Aug 2023",
+    role: "Front-End Developer",
+    company: " Springpeople Software Pvt Ltd.",
+    detail:
+      "Developed responsive product platform using HTML, CSS, Javascript and jQuery, that can render dynamically managed content within a headless CMS-style architecture",
+  },
+  {
+    period: "Apr 2022 — Nov 2022",
+    role: "Software Development Engineer",
+    company: "Cloudegic Inc",
+    detail:
+      "Built full-stack applications with React (TypeScript) frontend, Node.js/MongoDB backend, unit tested with Jest and React Testing Library, and deployed to AWS.",
   },
 ];
 
@@ -173,7 +187,32 @@ function App() {
           <b>]</b>;
         </div>
       </section>
-
+      <section
+        className="experience-section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div>
+          <p className="eyebrow">Experience</p>
+          <h2 id="experience-title">
+            A record of
+            <br />
+            <em>shipping well.</em>
+          </h2>
+        </div>
+        <div className="experience-list">
+          {experience.map((item) => (
+            <article className="experience-item" key={item.period}>
+              <p className="experience-period">{item.period}</p>
+              <div>
+                <h3>{item.role}</h3>
+                <p className="experience-company">{item.company}</p>
+                <p>{item.detail}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
       <section className="stack-section" aria-labelledby="stack-title">
         <div>
           <p className="eyebrow">The toolkit</p>
@@ -235,33 +274,6 @@ function App() {
                 ) : (
                   <span className="coming-soon">GitHub link coming soon</span>
                 )}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        className="experience-section"
-        id="experience"
-        aria-labelledby="experience-title"
-      >
-        <div>
-          <p className="eyebrow">Experience</p>
-          <h2 id="experience-title">
-            A record of
-            <br />
-            <em>shipping well.</em>
-          </h2>
-        </div>
-        <div className="experience-list">
-          {experience.map((item) => (
-            <article className="experience-item" key={item.period}>
-              <p className="experience-period">{item.period}</p>
-              <div>
-                <h3>{item.role}</h3>
-                <p className="experience-company">{item.company}</p>
-                <p>{item.detail}</p>
               </div>
             </article>
           ))}

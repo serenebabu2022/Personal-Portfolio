@@ -392,7 +392,7 @@ em {
   grid-template-columns: 130px 1fr;
   gap: 2rem;
   border-bottom: 1px solid #d9e0d8;
-  padding: 1.4rem 0;
+  padding: 1.2rem 0;
 }
 .experience-item:first-child {
   border-top: 1px solid #d9e0d8;
