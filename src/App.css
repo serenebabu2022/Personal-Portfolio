@@ -33,7 +33,7 @@ nav {
   gap: 1.75rem;
   align-items: center;
   font:
-    0.76rem Arial,
+    1rem Arial,
     Helvetica,
     sans-serif;
 }
@@ -63,7 +63,7 @@ nav a:hover,
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font:
-    700 0.63rem Arial,
+    700 0.85rem Arial,
     Helvetica,
     sans-serif;
 }
@@ -72,9 +72,9 @@ nav a:hover,
   margin-left: 2rem;
 }
 .status-line {
-  margin: 0 0 1.5rem;
+  margin: 1rem 0 1.5rem;
   font:
-    0.7rem Arial,
+    0.8rem Arial,
     Helvetica,
     sans-serif;
 }
@@ -85,7 +85,7 @@ nav a:hover,
   border-radius: 50%;
   background: #176b45;
   box-shadow: 0 0 0 3px #dcebe0;
-  margin-right: 0.6rem;
+  margin-right: 0.3rem;
 }
 h1,
 h2,
@@ -112,9 +112,48 @@ em {
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.5fr 0.6fr;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.65fr);
   gap: 3rem;
-  align-items: end;
+  align-items: start;
+}
+.hero-right {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  min-width: 0;
+}
+.profile-image {
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #176b45;
+  border-radius: 50%;
+  background: #dcebe0;
+  color: #176b45;
+  font:
+    700 clamp(2rem, 4vw, 3.5rem) Arial,
+    Helvetica,
+    sans-serif;
+}
+.profile-image::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid #9dbda9;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.profile-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
 }
 .hero-aside {
   max-width: 275px;
@@ -122,9 +161,10 @@ em {
   font-size: 0.88rem;
   line-height: 1.65;
 }
-.hero-aside p {
-  margin-bottom: 1.75rem;
+.hero-right .hero-aside {
+  max-width: 320px;
 }
+
 .scroll-link {
   color: #173126;
   border-bottom: 1px solid #176b45;
@@ -141,12 +181,13 @@ em {
   font-size: 1rem;
 }
 .code-strip {
+  margin-top: 1.5rem;
   border: 1px solid #d9e0d8;
   color: #6e7d73;
   padding: 0.75rem 1rem;
   font:
-    0.68rem Helvetica,
-    Arial,
+    0.76rem Arial,
+    Helvetica,
     sans-serif;
   background: #eef3ed;
 }
@@ -436,6 +477,10 @@ em {
   .achievements-section {
     grid-template-columns: 1fr;
     gap: 2.75rem;
+  }
+  .profile-image {
+    width: min(360px, 80vw);
+    justify-self: start;
   }
   h1 {
     font-size: clamp(3.4rem, 15vw, 6rem);

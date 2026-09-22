@@ -1,4 +1,5 @@
 import "./App.css";
+import profileImage from "./assets/profile.png";
 
 type Project = {
   number: string;
@@ -74,8 +75,8 @@ function App() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Alex Morgan home">
-          AM<span>_</span>
+        <a className="wordmark" href="#top" aria-label="Serene Babu home">
+          SB<span>_</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#projects">Projects</a>
@@ -102,14 +103,29 @@ function App() {
               <em>that does the work.</em>
             </h1>
           </div>
-          <div className="hero-aside">
-            <p>
-              Hi, I'm Alex. I turn ambiguous problems into clear, maintainable
-              systems, from the first component to the last deployment.
-            </p>
-            <a className="scroll-link" href="#projects">
-              Explore projects <span aria-hidden="true">↓</span>
-            </a>
+          <div className="hero-right">
+            <div
+              className="profile-image"
+              aria-label="Profile photo placeholder"
+            >
+              <img
+                src={profileImage}
+                alt="Serene"
+                onError={(event) => {
+                  event.currentTarget.style.display = "none";
+                }}
+              />
+            </div>
+            <div className="hero-aside">
+              <p>
+                Hi, I'm Serene. I turn ambiguous problems into clear,
+                maintainable systems, from the first component to the last
+                deployment.
+              </p>
+              <a className="scroll-link" href="#projects">
+                Explore projects <span aria-hidden="true">↓</span>
+              </a>
+            </div>
           </div>
         </div>
         <div className="code-strip" aria-hidden="true">
