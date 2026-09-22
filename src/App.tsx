@@ -37,15 +37,55 @@ const projects: Project[] = [
   },
 ];
 
-const technologies = [
-  "React",
-  "TypeScript",
-  "JavaScript",
-  "Python",
-  "Node.js",
-  "AWS",
-  "C#",
-  ".NET",
+const skillGroups = [
+  {
+    title: "Frontend",
+    skills: [
+      "React",
+      "Next.js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "C#",
+      ".NET",
+      "ASP.NET Core",
+      "Python",
+      "Flask",
+    ],
+  },
+  {
+    title: "Databases",
+    skills: ["SQL Server", "PostgreSQL", "NoSQL"],
+  },
+  {
+    title: "Programming Languages",
+    skills: ["Python", "TypeScript", "JavaScript", "C#"],
+  },
+  {
+    title: "ORM / Data Access",
+    skills: ["Entity Framework Core", "LINQ"],
+  },
+  {
+    title: "Cloud",
+    skills: ["AWS Cloud Services"],
+  },
+  {
+    title: "DevOps & Tools",
+    skills: ["CI/CD Pipelines", "Git", "GitHub", "GitLab", "Docker", "Jira"],
+  },
+  {
+    title: "AI Assisted Development",
+    skills: ["Copilot", "Claude"],
+  },
 ];
 
 const experience = [
@@ -143,12 +183,19 @@ function App() {
             <em>make things move.</em>
           </h2>
         </div>
-        <div className="technology-list">
-          {technologies.map((technology, index) => (
-            <span key={technology}>
-              <small>{String(index + 1).padStart(2, "0")}</small>
-              {technology}
-            </span>
+        <div className="skill-card-grid">
+          {skillGroups.map((group, index) => (
+            <article className="skill-card" key={group.title}>
+              <div className="skill-card-header">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{group.title}</h3>
+              </div>
+              <ul>
+                {group.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </section>

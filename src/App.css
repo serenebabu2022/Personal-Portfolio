@@ -224,22 +224,57 @@ em {
   grid-template-columns: repeat(2, 1fr);
   align-content: center;
 }
-.technology-list span {
-  border-bottom: 1px solid #d9e0d8;
-  padding: 0.9rem 0.2rem;
-  color: #17221c;
+.skill-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+.skill-card {
+  min-width: 0;
+  padding: 1.1rem;
+  border: 1px solid #d9e0d8;
+  background: #fff;
+}
+.skill-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #e6ece6;
+}
+.skill-card-header > span {
+  color: #176b45;
   font:
-    0.92rem Arial,
+    0.62rem Arial,
     Helvetica,
     sans-serif;
 }
-.technology-list small {
-  color: #9aa89d;
-  font-size: 0.6rem;
-  margin-right: 1rem;
+.skill-card h3 {
+  margin: 0;
+  color: #17221c;
+  font:
+    650 0.86rem/1.25 Arial,
+    Helvetica,
+    sans-serif;
 }
-.section-heading {
-  margin-bottom: 3.5rem;
+.skill-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.9rem 0 0;
+}
+.skill-card li {
+  padding: 0.3rem 0.45rem;
+  border: 1px solid #1e211e;
+  border-radius: 2px;
+  color: #17221c;
+  background: #eeeeee;
+  font:
+    0.68rem Arial,
+    Helvetica,
+    sans-serif;
 }
 .project-list {
   display: grid;
@@ -477,6 +512,9 @@ em {
   .achievements-section {
     grid-template-columns: 1fr;
     gap: 2.75rem;
+  }
+  .skill-card-grid {
+    grid-template-columns: 1fr;
   }
   .profile-image {
     width: min(360px, 80vw);
