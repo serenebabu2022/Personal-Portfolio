@@ -1,0 +1,25 @@
+:root {
+  font:
+    16px/1.5 "Segoe UI",
+    Arial,
+    sans-serif;
+  color: #526158;
+  background: #f7faf7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+}

@@ -1,0 +1,484 @@
+#root {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+main {
+  overflow: hidden;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #d9e0d8;
+}
+.wordmark {
+  color: #143f2b;
+  font:
+    700 1.2rem/1 Arial,
+    Helvetica,
+    sans-serif;
+  text-decoration: none;
+  letter-spacing: -0.08em;
+}
+.wordmark span,
+.eyebrow,
+.project-type,
+.status-line {
+  color: #176b45;
+}
+nav {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+  font:
+    0.76rem Arial,
+    Helvetica,
+    sans-serif;
+}
+nav a,
+.footer-links a,
+.scroll-link {
+  text-decoration: none;
+}
+nav a:hover,
+.footer-links a:hover,
+.scroll-link:hover {
+  color: #176b45;
+}
+.nav-contact {
+  border-bottom: 1px solid #176b45;
+  padding-bottom: 3px;
+}
+.hero-section {
+  min-height: min(720px, 78vh);
+  padding: 12vh 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font:
+    700 0.63rem Arial,
+    Helvetica,
+    sans-serif;
+}
+.eyebrow span {
+  color: #6e7d73;
+  margin-left: 2rem;
+}
+.status-line {
+  margin: 0 0 1.5rem;
+  font:
+    0.7rem Arial,
+    Helvetica,
+    sans-serif;
+}
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #176b45;
+  box-shadow: 0 0 0 3px #dcebe0;
+  margin-right: 0.6rem;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2 {
+  color: #17221c;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 650;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+h1 {
+  max-width: 950px;
+  margin: 0;
+  font-size: clamp(3.8rem, 8vw, 7.6rem);
+}
+em {
+  color: #176b45;
+  font-style: normal;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.6fr;
+  gap: 3rem;
+  align-items: end;
+}
+.hero-aside {
+  max-width: 275px;
+  color: #526158;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+.hero-aside p {
+  margin-bottom: 1.75rem;
+}
+.scroll-link {
+  color: #173126;
+  border-bottom: 1px solid #176b45;
+  padding-bottom: 5px;
+  font:
+    0.7rem Arial,
+    Helvetica,
+    sans-serif;
+}
+.scroll-link span,
+.email-link span {
+  margin-left: 0.7rem;
+  color: #176b45;
+  font-size: 1rem;
+}
+.code-strip {
+  border: 1px solid #d9e0d8;
+  color: #6e7d73;
+  padding: 0.75rem 1rem;
+  font:
+    0.68rem Helvetica,
+    Arial,
+    sans-serif;
+  background: #eef3ed;
+}
+.code-strip span {
+  color: #176b45;
+}
+.code-strip b {
+  color: #a16b18;
+}
+.stack-section,
+.work-section,
+.experience-section,
+.achievements-section {
+  border-top: 1px solid #d9e0d8;
+  padding: 6rem 0 7rem;
+}
+.stack-section,
+.experience-section,
+.achievements-section {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 5rem;
+}
+.stack-section h2,
+.section-heading h2,
+.experience-section h2,
+.achievements-section h2,
+.site-footer h2 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  margin: 1.4rem 0 0;
+}
+.technology-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+}
+.technology-list span {
+  border-bottom: 1px solid #d9e0d8;
+  padding: 0.9rem 0.2rem;
+  color: #17221c;
+  font:
+    0.92rem Arial,
+    Helvetica,
+    sans-serif;
+}
+.technology-list small {
+  color: #9aa89d;
+  font-size: 0.6rem;
+  margin-right: 1rem;
+}
+.section-heading {
+  margin-bottom: 3.5rem;
+}
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.project-card {
+  min-width: 0;
+  border: 1px solid #d9e0d8;
+  background: #fff;
+}
+.project-visual {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #d9e0d8;
+  background: #e6eee7;
+}
+.project-visual span {
+  color: rgba(23, 63, 43, 0.72);
+  font:
+    700 5rem "Segoe UI",
+    Arial,
+    sans-serif;
+  z-index: 1;
+}
+.project-visual b {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  color: #3f6652;
+  font:
+    0.6rem Arial,
+    Helvetica,
+    sans-serif;
+}
+.project-visual i {
+  position: absolute;
+  width: 42%;
+  height: 42%;
+  border: 1px solid rgba(23, 107, 69, 0.7);
+  transform: rotate(45deg);
+  transition: transform 0.5s ease;
+}
+.project-card:hover .project-visual i {
+  transform: rotate(135deg) scale(1.12);
+}
+.cyan .project-visual {
+  background: #dcebe0;
+}
+.lime .project-visual {
+  background: #e7edd1;
+}
+.orange .project-visual {
+  background: #f0e5cc;
+}
+.project-copy {
+  padding: 1.3rem;
+}
+.project-type {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font:
+    700 0.59rem Arial,
+    Helvetica,
+    sans-serif;
+  margin-bottom: 0.8rem;
+}
+.project-copy h3,
+.experience-item h3 {
+  color: #17221c;
+  font:
+    650 1.45rem/1.15 "Segoe UI",
+    Arial,
+    sans-serif;
+  margin-bottom: 0.7rem;
+}
+.project-copy > p:not(.project-type) {
+  color: #637168;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  max-width: 310px;
+  min-height: 5.2rem;
+}
+.project-copy a,
+.coming-soon {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #173126;
+  font:
+    0.66rem Arial,
+    Helvetica,
+    sans-serif;
+  text-decoration: none;
+  border-bottom: 1px solid #176b45;
+  padding-bottom: 3px;
+}
+.project-copy a span {
+  color: #176b45;
+  margin-left: 0.5rem;
+}
+.coming-soon {
+  color: #8a988e;
+  border: 0;
+}
+.experience-list {
+  display: flex;
+  flex-direction: column;
+}
+.experience-item {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 2rem;
+  border-bottom: 1px solid #d9e0d8;
+  padding: 1.4rem 0;
+}
+.experience-item:first-child {
+  border-top: 1px solid #d9e0d8;
+}
+.experience-period,
+.experience-company {
+  color: #176b45;
+  font:
+    0.64rem Arial,
+    Helvetica,
+    sans-serif;
+}
+.experience-item h3 {
+  margin: 0 0 0.35rem;
+}
+.experience-item p:last-child {
+  color: #637168;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+.experience-company {
+  margin-bottom: 0.75rem;
+}
+.achievement-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+.achievement-list div {
+  border-left: 2px solid #176b45;
+  padding-left: 1rem;
+}
+.achievement-list strong {
+  display: block;
+  color: #17221c;
+  font:
+    650 2.1rem "Segoe UI",
+    Arial,
+    sans-serif;
+}
+.achievement-list span {
+  color: #637168;
+  font:
+    0.62rem Arial,
+    Helvetica,
+    sans-serif;
+}
+.site-footer {
+  border-top: 1px solid #d9e0d8;
+  padding: 6rem 0 2rem;
+  position: relative;
+  min-height: 430px;
+}
+.site-footer h2 {
+  margin-bottom: 0;
+}
+.footer-links {
+  position: absolute;
+  right: 0;
+  bottom: 5rem;
+  text-align: right;
+}
+.email-link {
+  color: #173126;
+  font:
+    1.05rem "Segoe UI",
+    Arial,
+    sans-serif;
+  border-bottom: 1px solid #176b45;
+  padding-bottom: 0.4rem;
+}
+.footer-links div {
+  display: flex;
+  gap: 1.4rem;
+  margin-top: 2.25rem;
+  font:
+    0.66rem Arial,
+    Helvetica,
+    sans-serif;
+}
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #8a988e;
+  font:
+    0.62rem Arial,
+    Helvetica,
+    sans-serif;
+}
+@media (max-width: 700px) {
+  #root {
+    padding: 0 1.25rem;
+  }
+  .site-header {
+    padding: 20px 0;
+  }
+  nav {
+    gap: 1rem;
+  }
+  nav a:nth-child(2) {
+    display: none;
+  }
+  .hero-section {
+    min-height: 620px;
+    padding: 10vh 0 4rem;
+  }
+  .eyebrow span {
+    display: block;
+    margin: 0.4rem 0 0;
+  }
+  .hero-grid,
+  .stack-section,
+  .experience-section,
+  .achievements-section {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+  h1 {
+    font-size: clamp(3.4rem, 15vw, 6rem);
+  }
+  .hero-aside {
+    max-width: 320px;
+  }
+  .stack-section,
+  .work-section,
+  .experience-section,
+  .achievements-section {
+    padding: 4.5rem 0;
+  }
+  .section-heading {
+    margin-bottom: 2.75rem;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .project-visual {
+    height: 220px;
+  }
+  .project-copy > p:not(.project-type) {
+    min-height: auto;
+  }
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+  .achievement-list {
+    gap: 1.5rem;
+  }
+  .site-footer {
+    padding: 4.5rem 0 6rem;
+    min-height: 550px;
+  }
+  .footer-links {
+    position: static;
+    text-align: left;
+    margin-top: 4rem;
+  }
+  .footer-links div {
+    justify-content: space-between;
+  }
+}
