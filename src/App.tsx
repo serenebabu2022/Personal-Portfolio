@@ -3,6 +3,7 @@ import profileImage from "./assets/profile.png";
 import SpaceplorerImage from "./assets/spaceplorer.jpg";
 import RentaraImage from "./assets/rentara.jpg";
 import MovieListingImage from "./assets/movieListing.jpg";
+import resume from "./assets/resume.pdf";
 
 type Project = {
   number: string;
@@ -187,9 +188,18 @@ function App() {
                 maintainable systems, from the first component to the last
                 deployment.
               </p>
-              <a className="scroll-link" href="#projects">
-                Explore projects <span aria-hidden="true">↓</span>
-              </a>
+              <div className="hero-projects-resume">
+                <a className="scroll-link" href="#projects">
+                  Explore projects <span aria-hidden="true">↓</span>
+                </a>
+                <a
+                  className="resume-link"
+                  href={resume}
+                  download="Serene-Babu-CV.pdf"
+                >
+                  Resume <span aria-hidden="true">↓</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
