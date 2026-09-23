@@ -1,5 +1,8 @@
 import "./App.css";
 import profileImage from "./assets/profile.png";
+import SpaceplorerImage from "./assets/spaceplorer.jpg";
+import RentaraImage from "./assets/rentara.jpg";
+import MovieListingImage from "./assets/movieListing.jpg";
 
 type Project = {
   number: string;
@@ -7,33 +10,41 @@ type Project = {
   description: string;
   stack: string;
   githubUrl?: string;
-  accent: string;
+  image: string;
+  liveUrl?: string;
 };
 
 const projects: Project[] = [
   {
     number: "01",
-    title: "Project Atlas",
+    title: "Spaceplorer",
     description:
-      "A full-stack project workspace for turning complex team workflows into clear, trackable progress.",
-    stack: "React / TypeScript / Node.js",
-    accent: "cyan",
+      "A full-stack web application that allows users to explore NASA's space data",
+    stack:
+      "React / TypeScript / Node.js / Express / AWS / Jest / React Testing Library",
+    githubUrl: "https://github.com/serenebabu2022/Spaceplorer",
+    liveUrl: "https://spaceplorer-ijto.onrender.com/",
+    image: SpaceplorerImage,
   },
   {
     number: "02",
-    title: "Data Pipeline Lab",
+    title: "Movie Listing App",
     description:
-      "A Python service that processes, validates, and visualizes operational data for faster decisions.",
-    stack: "Python / AWS / PostgreSQL",
-    accent: "lime",
+      "React and TypeScript application for browsing movies and TV series using the TMDB API, deployed to AWS S3",
+    stack: "React / TypeScript / AWS / S3",
+    githubUrl: "https://github.com/serenebabu2022/labMoviesApp",
+    liveUrl: "https://github.com/serenebabu2022/labMoviesApp",
+    image: MovieListingImage,
   },
   {
     number: "03",
-    title: "Service Console",
+    title: "Rentara",
     description:
-      "A reliable internal dashboard for monitoring .NET services, deployments, and system health.",
-    stack: "C# / .NET / Azure",
-    accent: "orange",
+      "React application for a rental service, with focus on UX and accessibility",
+    stack: "React / TypeScript / UX / WCAG",
+    githubUrl: "https://github.com/serenebabu2022/Rentara",
+    liveUrl: "https://rentara.netlify.app/",
+    image: RentaraImage,
   },
 ];
 
@@ -90,18 +101,32 @@ const skillGroups = [
 
 const experience = [
   {
-    period: "2023 — Now",
-    role: "Senior Full-Stack Developer",
-    company: "Independent / Consulting",
+    period: "Sept 2025 — Present",
+    role: "Full Stack Developer",
+    company: "Caddayn, Remote",
     detail:
-      "Building dependable products across frontend, APIs, data, and cloud infrastructure.",
+      "Built ASP.NET Core (.NET 8) Web APIs using C#, Entity Framework Core, LINQ, SQL Server and containerized using Docker for ERP-based employee management system",
   },
   {
-    period: "2020 — 2023",
-    role: "Software Developer",
-    company: "Product & Platform Teams",
+    period: "Dec 2024 — Sept 2025",
+    role: "Full Stack Developer Volunteer",
+    company: "Orcawise, Dublin, Ireland",
     detail:
-      "Shipped customer-facing React applications and backend services in collaborative delivery teams.",
+      "Developed a GenAI-powered chatbot platform using React (TypeScript) and Python Flask APIs. Integrated OpenAI LLMs and worked with LangChain-based RAG pipelines using embeddings and FAISS vector storage.",
+  },
+  {
+    period: "Nov 2022 — Aug 2023",
+    role: "Front-End Developer",
+    company: " Springpeople Software Pvt Ltd.",
+    detail:
+      "Developed responsive product platform using HTML, CSS, Javascript and jQuery, that can render dynamically managed content within a headless CMS-style architecture",
+  },
+  {
+    period: "Apr 2022 — Nov 2022",
+    role: "Software Development Engineer",
+    company: "Cloudegic Inc",
+    detail:
+      "Built full-stack applications with React (TypeScript) frontend, Node.js/MongoDB backend, unit tested with Jest and React Testing Library, and deployed to AWS.",
   },
 ];
 
@@ -173,74 +198,6 @@ function App() {
           <b>]</b>;
         </div>
       </section>
-
-      <section className="stack-section" aria-labelledby="stack-title">
-        <div>
-          <p className="eyebrow">The toolkit</p>
-          <h2 id="stack-title">
-            Tools I use to
-            <br />
-            <em>make things move.</em>
-          </h2>
-        </div>
-        <div className="skill-card-grid">
-          {skillGroups.map((group, index) => (
-            <article className="skill-card" key={group.title}>
-              <div className="skill-card-header">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{group.title}</h3>
-              </div>
-              <ul>
-                {group.skills.map((skill) => (
-                  <li key={skill}>{skill}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        className="work-section"
-        id="projects"
-        aria-labelledby="projects-title"
-      >
-        <div className="section-heading">
-          <p className="eyebrow">Selected projects</p>
-          <h2 id="projects-title">
-            Built, shipped,
-            <br />
-            <em>learned from.</em>
-          </h2>
-        </div>
-        <div className="project-list">
-          {projects.map((project) => (
-            <article
-              className={`project-card ${project.accent}`}
-              key={project.number}
-            >
-              <div className="project-visual" aria-hidden="true">
-                <span>{project.number}</span>
-                <i />
-                <b>./{project.title.toLowerCase().replaceAll(" ", "-")}</b>
-              </div>
-              <div className="project-copy">
-                <p className="project-type">{project.stack}</p>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                {project.githubUrl ? (
-                  <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                    View on GitHub <span aria-hidden="true">↗</span>
-                  </a>
-                ) : (
-                  <span className="coming-soon">GitHub link coming soon</span>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section
         className="experience-section"
         id="experience"
@@ -263,6 +220,77 @@ function App() {
                 <p className="experience-company">{item.company}</p>
                 <p>{item.detail}</p>
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section
+        className="work-section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div className="section-heading">
+          <p className="eyebrow">Selected projects</p>
+          <h2 id="projects-title">
+            Built, shipped,
+            <br />
+            <em>learned from.</em>
+          </h2>
+        </div>
+        <div className="project-list">
+          {projects.map((project) => (
+            <article
+              className={`project-card ${project.number}`}
+              key={project.number}
+            >
+              <a
+                className="project-visual"
+                href={project.liveUrl ? project.liveUrl : "#"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={project.image} alt={`${project.title} preview`} />
+                {/* <span>{project.number}</span>
+                <i /> */}
+                {/* <b>./{project.title.toLowerCase().replaceAll(" ", "-")}</b> */}
+              </a>
+              <div className="project-copy">
+                <p className="project-type">{project.stack}</p>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                {project.githubUrl ? (
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                    View on GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                ) : (
+                  <span className="coming-soon">GitHub link coming soon</span>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="stack-section" aria-labelledby="stack-title">
+        <div>
+          <p className="eyebrow">The toolkit</p>
+          <h2 id="stack-title">
+            Tools I use to
+            <br />
+            <em>make things move.</em>
+          </h2>
+        </div>
+        <div className="skill-card-grid">
+          {skillGroups.map((group, index) => (
+            <article className="skill-card" key={group.title}>
+              <div className="skill-card-header">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{group.title}</h3>
+              </div>
+              <ul>
+                {group.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
