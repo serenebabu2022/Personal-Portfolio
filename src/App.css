@@ -41,6 +41,7 @@ nav a,
 .footer-links a,
 .scroll-link {
   text-decoration: none;
+  width: fit-content;
 }
 nav a:hover,
 .footer-links a:hover,
@@ -161,6 +162,10 @@ em {
   font-size: 0.88rem;
   line-height: 1.65;
 }
+.hero-projects-resume {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .hero-right .hero-aside {
   max-width: 320px;
 }
@@ -173,6 +178,27 @@ em {
     0.7rem Arial,
     Helvetica,
     sans-serif;
+}
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  color: #176b45;
+  border: 1px solid #176b45;
+  padding: 0.45rem 0.7rem;
+  font:
+    0.7rem Arial,
+    Helvetica,
+    sans-serif;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.resume-link:hover {
+  color: #ffffff;
+  background: #176b45;
 }
 .scroll-link span,
 .email-link span {
