@@ -130,11 +130,11 @@ const experience = [
   },
 ];
 
-const achievements = [
-  { value: "8+", label: "years writing software" },
-  { value: "30+", label: "projects shipped" },
-  { value: "99.9%", label: "uptime targeted" },
-];
+// const achievements = [
+//   { value: "8+", label: "years writing software" },
+//   { value: "30+", label: "projects shipped" },
+//   { value: "99.9%", label: "uptime targeted" },
+// ];
 
 function App() {
   return (
@@ -296,7 +296,7 @@ function App() {
         </div>
       </section>
 
-      <section
+      {/* <section
         className="achievements-section"
         aria-labelledby="achievements-title"
       >
@@ -316,7 +316,7 @@ function App() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <footer className="site-footer" id="contact">
         <div>
@@ -328,18 +328,30 @@ function App() {
           </h2>
         </div>
         <div className="footer-links">
-          <a className="email-link" href="mailto:hello@alexmorgan.dev">
-            hello@alexmorgan.dev <span aria-hidden="true">↗</span>
+          <a
+            className="email-link"
+            href="mailto:serenedev.cold361@slmails.com?subject=Portfolio%20Enquiry"
+          >
+            Email me <span aria-hidden="true">↗</span>
           </a>
           <div>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/serenebabu2022"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </a>
-            <a href="#top">LinkedIn</a>
-            <a href="#top">Resume</a>
+            <a
+              href="https://www.linkedin.com/in/serene-babu-377974147/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
-        <p className="copyright">© 2026 Alex Morgan</p>
+        <p className="copyright">© 2026 Serene Babu</p>
       </footer>
     </main>
   );
