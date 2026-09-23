@@ -1,8 +1,8 @@
 import "./App.css";
 import profileImage from "./assets/profile.png";
-import SpaceplorerImage from "./assets/spaceplorer.jpg";
-import RentaraImage from "./assets/rentara.jpg";
-import MovieListingImage from "./assets/movieListing.jpg";
+import SpaceplorerImage from "./assets/Spaceplorer.jpg";
+import RentaraImage from "./assets/Rentara.jpg";
+import MovieListingImage from "./assets/MovieListing.jpg";
 import resume from "./assets/resume.pdf";
 
 type Project = {
