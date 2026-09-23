@@ -1,5 +1,8 @@
 import "./App.css";
 import profileImage from "./assets/profile.png";
+import SpaceplorerImage from "./assets/spaceplorer.jpg";
+import RentaraImage from "./assets/rentara.jpg";
+import MovieListingImage from "./assets/movieListing.jpg";
 
 type Project = {
   number: string;
@@ -7,33 +10,41 @@ type Project = {
   description: string;
   stack: string;
   githubUrl?: string;
-  accent: string;
+  image: string;
+  liveUrl?: string;
 };
 
 const projects: Project[] = [
   {
     number: "01",
-    title: "Project Atlas",
+    title: "Spaceplorer",
     description:
-      "A full-stack project workspace for turning complex team workflows into clear, trackable progress.",
-    stack: "React / TypeScript / Node.js",
-    accent: "cyan",
+      "A full-stack web application that allows users to explore NASA's space data",
+    stack:
+      "React / TypeScript / Node.js / Express / AWS / Jest / React Testing Library",
+    githubUrl: "https://github.com/serenebabu2022/Spaceplorer",
+    liveUrl: "https://spaceplorer-ijto.onrender.com/",
+    image: SpaceplorerImage,
   },
   {
     number: "02",
-    title: "Data Pipeline Lab",
+    title: "Movie Listing App",
     description:
-      "A Python service that processes, validates, and visualizes operational data for faster decisions.",
-    stack: "Python / AWS / PostgreSQL",
-    accent: "lime",
+      "React and TypeScript application for browsing movies and TV series using the TMDB API, deployed to AWS S3",
+    stack: "React / TypeScript / AWS / S3",
+    githubUrl: "https://github.com/serenebabu2022/labMoviesApp",
+    liveUrl: "https://github.com/serenebabu2022/labMoviesApp",
+    image: MovieListingImage,
   },
   {
     number: "03",
-    title: "Service Console",
+    title: "Rentara",
     description:
-      "A reliable internal dashboard for monitoring .NET services, deployments, and system health.",
-    stack: "C# / .NET / Azure",
-    accent: "orange",
+      "React application for a rental service, with focus on UX and accessibility",
+    stack: "React / TypeScript / UX / WCAG",
+    githubUrl: "https://github.com/serenebabu2022/Rentara",
+    liveUrl: "https://rentara.netlify.app/",
+    image: RentaraImage,
   },
 ];
 
@@ -213,6 +224,52 @@ function App() {
           ))}
         </div>
       </section>
+      <section
+        className="work-section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div className="section-heading">
+          <p className="eyebrow">Selected projects</p>
+          <h2 id="projects-title">
+            Built, shipped,
+            <br />
+            <em>learned from.</em>
+          </h2>
+        </div>
+        <div className="project-list">
+          {projects.map((project) => (
+            <article
+              className={`project-card ${project.number}`}
+              key={project.number}
+            >
+              <a
+                className="project-visual"
+                href={project.liveUrl ? project.liveUrl : "#"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={project.image} alt={`${project.title} preview`} />
+                {/* <span>{project.number}</span>
+                <i /> */}
+                {/* <b>./{project.title.toLowerCase().replaceAll(" ", "-")}</b> */}
+              </a>
+              <div className="project-copy">
+                <p className="project-type">{project.stack}</p>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                {project.githubUrl ? (
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                    View on GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                ) : (
+                  <span className="coming-soon">GitHub link coming soon</span>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
       <section className="stack-section" aria-labelledby="stack-title">
         <div>
           <p className="eyebrow">The toolkit</p>
@@ -234,47 +291,6 @@ function App() {
                   <li key={skill}>{skill}</li>
                 ))}
               </ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        className="work-section"
-        id="projects"
-        aria-labelledby="projects-title"
-      >
-        <div className="section-heading">
-          <p className="eyebrow">Selected projects</p>
-          <h2 id="projects-title">
-            Built, shipped,
-            <br />
-            <em>learned from.</em>
-          </h2>
-        </div>
-        <div className="project-list">
-          {projects.map((project) => (
-            <article
-              className={`project-card ${project.accent}`}
-              key={project.number}
-            >
-              <div className="project-visual" aria-hidden="true">
-                <span>{project.number}</span>
-                <i />
-                <b>./{project.title.toLowerCase().replaceAll(" ", "-")}</b>
-              </div>
-              <div className="project-copy">
-                <p className="project-type">{project.stack}</p>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                {project.githubUrl ? (
-                  <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                    View on GitHub <span aria-hidden="true">↗</span>
-                  </a>
-                ) : (
-                  <span className="coming-soon">GitHub link coming soon</span>
-                )}
-              </div>
             </article>
           ))}
         </div>

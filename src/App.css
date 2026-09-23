@@ -314,13 +314,19 @@ em {
     Helvetica,
     sans-serif;
 }
-.project-visual i {
+/* .project-visual i {
   position: absolute;
   width: 42%;
   height: 42%;
   border: 1px solid rgba(23, 107, 69, 0.7);
   transform: rotate(45deg);
   transition: transform 0.5s ease;
+  cursor: pointer;
+} */
+.project-visual img {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: contain;
 }
 .project-card:hover .project-visual i {
   transform: rotate(135deg) scale(1.12);
