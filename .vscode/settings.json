@@ -1,0 +1,7 @@
+{
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Use Conventional Commits such as feat:, fix:, refactor:, test:, docs:, or chore:. Keep the first line under 72 characters and describe the purpose of the change rather than listing every modified file."
+    }
+  ]
+}
