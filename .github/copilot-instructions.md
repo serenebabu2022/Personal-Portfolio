@@ -1,12 +1,4 @@
-# Portfolio Development Instructions
-
-## Stack
-
-- React
-- TypeScript
-- Vite
-- CSS
-- Netlify
+# Custom Instructions for Copilot
 
 ## Development principles
 
@@ -15,6 +7,12 @@
 - Keep components small and readable.
 - Do not introduce dependencies unless necessary.
 - Preserve the existing visual design unless explicitly asked to change it.
+
+## Typescript
+
+- Indent with 2 spaces.
+- Use camelCase for variable and function names.
+- Constants should be in UPPER_CASE with underscores(eg. MAX_SIZE).
 
 ## Responsive design
 
