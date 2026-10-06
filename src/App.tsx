@@ -3,7 +3,7 @@ import profileImage from "./assets/profilePic.png";
 import SpaceplorerImage from "./assets/spaceplorer.jpg";
 import RentaraImage from "./assets/rentara.jpg";
 import MovieListingImage from "./assets/movieListing.jpg";
-import resume from "./assets/resume.pdf";
+import resume from "./assets/cv.pdf";
 
 type Project = {
   number: string;
